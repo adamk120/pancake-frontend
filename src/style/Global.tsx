@@ -19,6 +19,16 @@ const GlobalStyle = createGlobalStyle`
       max-width: 100%;
     }
   }
+  .locked {
+    background-color: ${({ theme }) => theme.colors.locked};
+    pointer-events: none;
+      div {
+      color: #BDC2C4;
+      }
+      svg {
+        fill: #BDC2C4;
+      }
+  }  
 `
 
 export default GlobalStyle

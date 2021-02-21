@@ -83,9 +83,9 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="secondary">
-          {TranslateString(576, 'PancakeSwap')}
+          {TranslateString(576, '!USD')}
         </Heading>
-        <Text>{TranslateString(578, 'The #1 AMM and yield farm on Binance Smart Chain.')}</Text>
+        <Text>{TranslateString(578, 'Giving use to the unused.')}</Text>
       </Hero>
       <div>
         <Cards>

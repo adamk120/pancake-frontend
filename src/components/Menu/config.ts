@@ -2,112 +2,61 @@ import { MenuEntry } from '@pancakeswap-libs/uikit'
 
 const config: MenuEntry[] = [
   {
-    label: 'Home',
+    label: '!USD',
     icon: 'HomeIcon',
     href: '/',
-  },
-  {
-    label: 'Trade',
-    icon: 'TradeIcon',
-    items: [
-      {
-        label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance',
-      },
-      {
-        label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/pool',
-      },
-    ],
+    calloutClass: 'rainbow'
   },
   {
     label: 'Farms',
     icon: 'FarmIcon',
     href: '/farms',
+    calloutClass: 'locked'
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
     href: '/pools',
+    calloutClass: 'locked'
   },
   {
-    label: 'Lottery',
+    label: 'Stablecoin Minter',
     icon: 'TicketIcon',
     href: '/lottery',
-  },
-  {
-    label: 'Collectibles',
-    icon: 'NftIcon',
-    href: '/collectibles',
-  },
-  {
-    label: 'Teams & Profile',
-    icon: 'GroupsIcon',
-    calloutClass: 'rainbow',
-    items: [
-      {
-        label: 'Leaderboard',
-        href: '/teams',
-      },
-      {
-        label: 'Task Center',
-        href: '/profile/tasks',
-      },
-      {
-        label: 'Your Profile',
-        href: '/profile',
-      },
-    ],
+    calloutClass: 'locked'
   },
   {
     label: 'Info',
     icon: 'InfoIcon',
+    href: '',
+    calloutClass: 'locked',
+  },  
+  {
+    label: 'Teams & Profile',
+    icon: 'GroupsIcon',
     items: [
       {
-        label: 'Overview',
-        href: 'https://pancakeswap.info',
-      },
-      {
-        label: 'Tokens',
-        href: 'https://pancakeswap.info/tokens',
-      },
-      {
-        label: 'Pairs',
-        href: 'https://pancakeswap.info/pairs',
-      },
-      {
-        label: 'Accounts',
-        href: 'https://pancakeswap.info/accounts',
-      },
-    ],
-  },
-  {
-    label: 'IFO',
-    icon: 'IfoIcon',
-    href: '/ifo',
-  },
-  {
-    label: 'More',
-    icon: 'MoreIcon',
-    items: [
-      {
-        label: 'Voting',
-        href: 'https://voting.pancakeswap.finance',
+        label: 'Telegram',
+        href: 'https://t.me/notusdchat',
       },
       {
         label: 'Github',
-        href: 'https://github.com/pancakeswap',
+        href: 'https://github.com/',
       },
       {
-        label: 'Docs',
-        href: 'https://docs.pancakeswap.finance',
+        label: 'Discord',
+        href: 'https://discord.gg/zR4hxFQc',
+      },      
+      {
+        label: 'Medium',
+        href: 'https://medium.com/notusd',
       },
       {
         label: 'Blog',
-        href: 'https://pancakeswap.medium.com',
-      },
+        href: 'https://notusd.com/',
+      },      
     ],
-  },
+  }
 ]
 
 export default config
