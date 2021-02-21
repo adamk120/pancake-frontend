@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 // eslint-disable-next-line import/no-unresolved
-import { PancakeTheme } from '@pancakeswap-libs/uikit/dist/theme'
+import { PancakeTheme } from '@nusd-libs/uikit/dist/theme'
 
 declare module 'styled-components' {
   /* eslint-disable @typescript-eslint/no-empty-interface */
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   .locked {
-    background-color: #E9EAEB;
+    background-color: ${({ theme }) => theme.colors.locked};
     pointer-events: none;
       div {
       color: #BDC2C4;
