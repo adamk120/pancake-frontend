@@ -16,10 +16,12 @@ import CakeWinnings from './CakeWinnings'
 import LotteryJackpot from './LotteryJackpot'
 
 const StyledLotteryCard = styled(Card)`
-  background-image: url('/images/ticket-bg.svg');
+  background-image: url('/images/logo-extrans.svg');
+  background-size: 50%;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: 125% -40%;
   min-height: 376px;
+
 `
 
 const Block = styled.div`
@@ -71,7 +73,7 @@ const FarmedStakingCard = () => {
     if (!allowance.toNumber()) {
       return (
         <Button fullWidth disabled={requestedApproval} onClick={handleApprove}>
-          {TranslateString(494, 'Approve CAKE')}
+          {TranslateString(494, 'Approve nUSD')}
         </Button>
       )
     }
@@ -82,17 +84,18 @@ const FarmedStakingCard = () => {
     )
   }
 
-  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="CAKE" />)
+  const [onPresentBuy] = useModal(<BuyModal max={cakeBalance} tokenName="nUSD" />)
 
   return (
-    <StyledLotteryCard>
+    <StyledLotteryCard isDisabled>
+      <div className="locked-card-icon" />
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(550, 'Your Lottery Winnings')}
+          {TranslateString(550, 'Lottery Winnings')}
         </Heading>
-        <CardImage src="/images/ticket.svg" alt="cake logo" width={64} height={64} />
+        {/* <CardImage src="/images/ticket.svg" alt="cake logo" width={64} height={64} /> */}
         <Block>
-          <Label>{TranslateString(552, 'CAKE to Collect')}:</Label>
+          <Label>{TranslateString(552, 'nUSD to Collect')}:</Label>
           <CakeWinnings />
         </Block>
         <Block>

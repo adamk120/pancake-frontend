@@ -29,6 +29,20 @@ const GlobalStyle = createGlobalStyle`
         fill: #BDC2C4;
       }
   }  
+
+  .locked-card {
+    opacity: 0.2;
+
+    .locked-card-icon {
+      background-image: url('/images/lock-icon.png');
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
 `
 
 export default GlobalStyle

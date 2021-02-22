@@ -10,9 +10,10 @@ import CakeHarvestBalance from './CakeHarvestBalance'
 import CakeWalletBalance from './CakeWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/cake-bg.svg');
+  background-image: url('/images/logo-trans-rot.png');
+  background-size: 50%;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: 125% -40%;
   min-height: 376px;
 `
 
@@ -59,13 +60,13 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        <CardImage src="/images/cake.svg" alt="cake logo" width={64} height={64} />
+        {/* <CardImage src="/images/tokens/nUSDLogo.png" alt="nusd logo" width={64} height={64} /> */}
         <Block>
-          <Label>{TranslateString(544, 'CAKE to Harvest')}:</Label>
+          <Label>{TranslateString(544, 'nUSD to Claim')}:</Label>
           <CakeHarvestBalance />
         </Block>
         <Block>
-          <Label>{TranslateString(546, 'CAKE in Wallet')}:</Label>
+          <Label>{TranslateString(546, 'nUSD in Wallet')}:</Label>
           <CakeWalletBalance />
         </Block>
         <Actions>
@@ -77,8 +78,8 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting CAKE')
-                : TranslateString(532, `Harvest all (${balancesWithValue.length})`)}
+                ? TranslateString(548, 'Collecting nUSD')
+                : TranslateString(532, `Collect all (${balancesWithValue.length})`)}
             </Button>
           ) : (
             <UnlockButton fullWidth />

@@ -13,7 +13,7 @@ import WinCard from 'views/Home/components/WinCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/pan-bg-mobile.svg');
+  background-image: url('/images/tokens/stable-flip.svg');
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -25,8 +25,8 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/pan-bg2.svg'), url('/images/pan-bg.svg');
-    background-position: left center, right center;
+    background-image: url('/images/tokens/stablecoins-duo-sml.svg');
+    background-position: center;
     height: 165px;
     padding-top: 0;
   }
@@ -82,21 +82,23 @@ const Home: React.FC = () => {
   return (
     <Page>
       <Hero>
-        <Heading as="h1" size="xl" mb="24px" color="primary">
+        <Heading as="h1" size="xl" mb="24px" color="primaryBright">
           {TranslateString(576, '!USD')}
         </Heading>
-        <Text>{TranslateString(578, 'Giving use to the unused.')}</Text>
+        <Text>{TranslateString(578, 'Giving use to the unused')}</Text>
       </Hero>
       <div>
         <Cards>
           <FarmStakingCard />
-          <LotteryCard />
+          <div className="locked-card">
+            <LotteryCard />
+          </div>
         </Cards>
-        <CTACards>
+        {/* <CTACards>
           <EarnAPYCard />
           <EarnAssetCard />
           <WinCard />
-        </CTACards>
+        </CTACards> */}
         <Cards>
           <CakeStats />
           <TotalValueLockedCard />
