@@ -11,7 +11,7 @@ const config: MenuEntry[] = [
     label: 'Farms',
     icon: 'FarmIcon',
     href: '/farms',
-    calloutClass: 'locked'
+    // calloutClass: 'locked'
   },
   {
     label: 'Pools',
